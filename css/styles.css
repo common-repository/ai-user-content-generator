@@ -1,0 +1,147 @@
+/* Basic styles for the text generation tool */
+#text-generation-tool {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+#text-generation-tool .custom-button {
+    
+}
+#text-generation-tool .custom-textarea {
+    
+}
+
+/* CSS for the loader */
+.loader {
+    display: block;
+    margin: 50px auto;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #b9b9b9; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#topic {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+#generate-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#result-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.result-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.result-content {
+    display: flex;
+}
+
+#result {
+    flex: 1;
+    height: 400px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.copy-button-container {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#copy-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3498db;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#copy-button:hover {
+    background-color: #2980b9;
+}
+
+/*Settings page*/
+/* Toggle Switch Styles */
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.toggle-container input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-container input:checked + .toggle-slider {
+    background-color: #2196F3;
+}
+
+.toggle-container input:focus + .toggle-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.toggle-container input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
